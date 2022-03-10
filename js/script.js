@@ -16,7 +16,7 @@ var nom = 'Name'
 
 function run() {
     if (ruu.id == 'move') {
-        var i = Math.floor(Math.random() * 10)
+        var i = Math.floor(Math.random() * 8)
         if (i == 0) {
             z = z - 50;
             x = x + 50
@@ -44,17 +44,6 @@ function run() {
         }
         if (i == 7) {
             x = x - 50
-        }
-        if (i == 8) {
-            z = z - 50;
-            x = x + 50
-        }
-        if (i == 9) {
-            z = z + 50;
-            x = x - 50
-        }
-        if (i == 9) {
-            z = z + 50;
         }
         ruu.style =
             "background-color: red; width: 100px; height: 100px; border-radius: 100%; border: 50px solid white; margin-left:" +
