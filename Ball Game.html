@@ -10,10 +10,14 @@
 <body>
     <div id="tim"
         style="color: green; font-weight: bolder; font-size: xx-large; border: 3px solid green ; padding: 5px; margin-right: 1796px; position: fixed; top: 5px;">
-        00 : 30</div>
+        00 : 30
+        </div>
+
     <div id="point"
         style="color: green; font-weight: bolder; font-size: xx-large; border: 3px solid green ; padding: 5px; position: fixed; top: 5px; left: 1770px;">
-        Points : 0</div>
+        Points : 0
+        </div>
+
     <div id="move" style="background-color: red; 
                             width: 100px; height: 100px; 
                             border-radius: 100%; 
@@ -21,24 +25,49 @@
                             border-color:white;
                             margin-left:800px ; 
                             margin-top: 350px;
-                            cursor: pointer;" onpointerover="run()" onclick="win()"></div>
+                            cursor: pointer;" onpointermove="run()" onclick="win()">
+        </div>
 
     <div id="congrats"
-        style="width: 600px; height: 250px; background-color: rgb(214, 252, 255); border-radius: 10px; position:fixed ; top: 314.5px; left: 660px; box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.3); display: none; ">
-        <h1
-            style="text-align: center; color: white; margin: 0px;padding: 15px; background-color: rgb(136, 230, 236) ; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-            CONGRATULATIONS!!</h1>
-        <h2
-            style="text-align: center; padding-top: 2%; color: black; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-            You've won 1 Point! 🎉🎊</h2>
+        style="width: 600px; height: 250px; background-color: rgb(214, 252, 255); border-radius: 10px; position:fixed;
+        top: 314.5px; left: 660px; box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.3); display: none;">
+
+        <h1 style="text-align: center; color: white; margin: 0px;padding: 15px; 
+            background-color: rgb(136, 230, 236) ; font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+            'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">CONGRATULATIONS!!
+            </h1>
+
+        <h2 style="text-align: center; padding-top: 2%; color: black; font-family: 'Trebuchet MS',
+            'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">You've won 1 Point! 🎉🎊
+            </h2>
+
         <input type="button" value="Try Again" id="try" class="btn" style="position: fixed; top: 480px; left: 860px; 
-            width: 200px; height:40px; 
-            border-radius: 30px; border: 0px; 
-            background-color: rgb(136, 230, 236); color: white
-            ; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-            font-weight: bold; font-size: x-large; cursor: pointer;" onclick="again()"></input>
-    </div>
-    </div>
+            width: 200px; height:40px; border-radius: 30px; border: 0px; background-color: rgb(136, 230, 236);
+            color: white ; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+            Arial, sans-serif; font-weight: bold; font-size: x-large; cursor: pointer;" onclick="again()">
+            </input>
+        </div>
+
+    <div id="lose"
+        style="width: 600px; height: 250px; background-color: rgb(214, 252, 255); border-radius: 10px; position:fixed;
+        top: 314.5px; left: 660px; box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.3); display: none;">
+
+        <h1 style="text-align: center; color: white; margin: 0px;padding: 15px; 
+            background-color: rgb(136, 230, 236) ; font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+            'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">SORRY!!
+            </h1>
+
+        <h2 style="text-align: center; padding-top: 2%; color: black; font-family: 'Trebuchet MS',
+            'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">You Lost!! 😥💔
+            </h2>
+
+        <input type="button" value="Try Again" id="try" class="btn" style="position: fixed; top: 480px; left: 860px; 
+            width: 200px; height:40px; border-radius: 30px; border: 0px; background-color: rgb(136, 230, 236);
+            color: white ; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',
+            Arial, sans-serif; font-weight: bold; font-size: x-large; cursor: pointer;" onclick="again()">
+            </input>
+        </div>
+
 </body>
 <script src="js/script.js"></script>
 </html>
