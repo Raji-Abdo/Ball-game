@@ -5,10 +5,14 @@ var ruu = document.getElementById('move')
 var tim = document.getElementById('tim')
 var con = document.getElementById('congrats')
 var los = document.getElementById('lose')
+var play = document.getElementById('play')
 var points = 0
 var poi = document.getElementById('point')
 var interval = window.setInterval(' lose () ;', 100)
 var timer = window.setInterval(' n9s () ;', 1000)
+var a = 0
+var nom = 'Name'
+
 
 function run() {
     if (ruu.id == 'move') {
@@ -67,13 +71,14 @@ function lose() {
         x = 800
         z = 350
         points = 0
-        poi.innerText = 'Points : ' + points
+        a = 0
+        poi.innerText = nom + ' : ' + points
 
     }
 }
 
 function win() {
-    clearInterval(timer)
+    a = 0
     xi = 30
     tim.innerText = '00 : ' + xi
     ruu.id = 'win'
@@ -82,12 +87,15 @@ function win() {
         x + "px ; margin-top: " + z + "px; cursor: pointer;";
     con.style.display = 'block'
     points += 1
-    poi.innerText = 'Points : ' + points
+    poi.innerText = nom + ' : ' + points
 }
 
 function n9s() {
-    xi -= 1
-    tim.innerText = '00 : ' + xi
+    if(a == 1) {
+        xi -= 1
+        tim.innerText = '00 : ' + xi
+    }
+    
 
     if (xi < 21) {
         tim.style.border = '3px solid orange'
@@ -99,9 +107,10 @@ function n9s() {
     }
     if (xi == -1) {
         los.style.display = 'block'
+        a = 0
         xi = 30
         points = 0
-        poi.innerText = 'Points : ' + points
+        poi.innerText = nom + ' : ' + points
     }
 }
 
@@ -115,7 +124,16 @@ function again() {
     con.style.display = 'none'
     los.style.display = 'none'
     ruu.id = 'move'
-    var timer = window.setInterval(' n9s () ;', 1000)
     tim.style.border = '3px solid green'
     tim.style.color = 'green'
+    a = 1
+}
+function start() {
+    play.style.display = 'none'
+    xi = 30
+    tim.innerText = '00 : ' + xi
+    a = 1
+    var nam = (document.getElementById('name')).value
+    nom = nam
+    poi.innerText = nom + ' : ' + points
 }
