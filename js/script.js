@@ -45,9 +45,8 @@ function run() {
         if (i == 7) {
             x = x - 50
         }
-        ruu.style =
-            "background-color: red; width: 100px; height: 100px; border-radius: 100%; border: 50px solid white; margin-left:" +
-            x + "px ; margin-top: " + z + "px; cursor: pointer;"
+        ruu.style.marginLeft = x + 'px'
+        ruu.style.marginTop = z + 'px'
     }
 }
 
@@ -125,4 +124,13 @@ function start() {
     var nam = (document.getElementById('name')).value
     nom = nam
     poi.innerText = nom + ' : ' + points
+}
+function ms(){
+    ruu.style.backgroundImage = 'url(images/messi.png)'
+}
+function rd(){
+    
+}
+function rn(){
+    
 }
