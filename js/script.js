@@ -70,9 +70,8 @@ function win() {
     xi = 30
     tim.innerText = '00 : ' + xi
     ruu.id = 'win'
-    ruu.style =
-        "background-color: green; width: 100px; height: 100px; border-radius: 100%; border: 50px solid white; margin-left:" +
-        x + "px ; margin-top: " + z + "px; cursor: pointer;";
+    ruu.style.marginLeft = x + 'px'
+    ruu.style.marginRight = z + 'px'
     con.style.display = 'block'
     points += 1
     poi.innerText = nom + ' : ' + points
@@ -129,8 +128,8 @@ function ms(){
     ruu.style.backgroundImage = 'url(images/messi.png)'
 }
 function rd(){
-    
+    ruu.style.backgroundColor = 'green'
 }
 function rn(){
-    
+    ruu.style.backgroundImage = 'url(images/ronaldo.png)'
 }
