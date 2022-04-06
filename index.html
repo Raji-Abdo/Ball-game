@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ball Game</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+
+  <body>
+    <div class="timer">00 : 30</div>
+    <div class="points">Name : 0</div>
+    <div class="ball" onpointermove="run()" onclick="win()"></div>
+    <div class="win">
+      <h1>CONGRATULATIONS!!</h1>
+      <h2>You've won 1 Point! 🎉🎊</h2>
+      <input type="button" value="Try Again" class="try" onclick="again()" />
+    </div>
+
+    <div class="lose">
+      <h1>SORRY!!</h1>
+      <h2>You Lost!! 😥💔</h2>
+      <input type="button" value="Try Again" class="try-again" onclick="again()" />
+    </div>
+
+    <div class="play">
+      <h1>BALL GAME</h1>
+      <div class="left">
+        <h2 class="wanna-play">WANNA PLAY?</h2>
+        <form>
+          <input type="text" class="username" placeholder="Enter Your Username" />
+        </form>
+        <input type="button" value="Start" class="start" onclick="start()" />
+        <h2 class="choose">CHOOSE A SKIN!</h2>
+        <div class="skins">
+          <img id="ms" onclick="ms()" src="img/messi.png" />
+          <div class="rd" onclick="rd()"></div>
+          <img id="rn" onclick="rn()" src="img/ronaldo.png" />
+        </div>
+      </div>
+      <div class="right"></div>
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+</html>
